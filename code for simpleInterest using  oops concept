@@ -1,0 +1,23 @@
+class SimpleInterestCalculator {
+     double principal;
+     double rate;
+     double time;
+    public SimpleInterestCalculator(double principal, double rate, double time) {
+        this.principal = principal;
+        this.rate = rate;
+        this.time = time;
+    }
+    public double calculateSimpleInterest() {
+        return (principal * rate * time) / 100;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        double principal = 1000.0;
+        double rate = 5.0;
+        double time = 2.0;
+        SimpleInterestCalculator calculator = new SimpleInterestCalculator(principal, rate, time);
+        double interest = calculator.calculateSimpleInterest();
+        System.out.println("The simple interest is: " + interest);
+    }
+}
